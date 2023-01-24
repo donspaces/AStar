@@ -107,8 +107,8 @@ def play(block_s, disj_st, rect_st, rand_se):
             init()
             self.screen = display.set_mode(size)
             display.set_caption("pushbox")
-            icon = image.load("assets/icon.png")
-            display.set_icon(icon)
+            # icon = image.load("assets/icon.png")
+            # display.set_icon(icon)
 
             self.clock = time.Clock()
             self.pushw, self.grid, self.gridl, self.dur_p, self.dur_g \
@@ -161,4 +161,11 @@ def play(block_s, disj_st, rect_st, rand_se):
 
 
 if __name__ == '__main__':
-    play()
+    size = 21
+    disjoint_point_strength = 3
+    rectangle_field_strength = 5
+    assert size % 2 != 0, "Size error!"
+    play(size,
+         disjoint_point_strength,
+         rectangle_field_strength,
+         rand_se=False)
