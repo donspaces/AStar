@@ -1,8 +1,8 @@
 # A*
 
 ![](https://www.101computing.net/wp/wp-content/uploads/A-Star-Search-Algorithm-Step-5.png)
-
-
+> From https://www.101computing.net/a-star-search-algorithm/
+>
 
 ## Description
 
@@ -12,11 +12,11 @@
 
 ## Terms
 
-$ h(n) $ : Heuristic function
+$h(n)$ : Heuristic function
 
-$ g(n) $ : Cost function
+$g(n)$ : Cost function
 
-$ h^*(n) $ : Optimal Cost to the goal
+$h^*(n)$ : Optimal Cost to the goal
 
 $g^*(n)$ : Optimal Cost function
 
@@ -25,13 +25,9 @@ $g^*(n)$ : Optimal Cost function
 ## Heuristic Properties
 
 *Admissible*
-$$
-\forall n \in G \quad h(n) \leq h^*(n)
-$$
+$$\forall n \in G \quad h(n) \leq h^*(n)$$
 *Consistent*
-$$
-\forall n \in G,\ n' \in G \quad\ h(n) - h'(n) \leq cost(n, n')
-$$
+$$\forall n \in G,\ n' \in G \quad\ h(n) - h'(n) \leq cost(n, n')$$
 
 
 
@@ -39,17 +35,11 @@ $$
 ## Heuristics
 
 *Manhattan distance*
-$$
-h(n) = |y_g - y_n| + |x_g - x_n|
-$$
+$$h(n) = |y_g - y_n| + |x_g - x_n|$$
 *Octile distance*
-$$
-h(n) = \sqrt{2}\min(\Delta{y_{gn}}, \Delta{x_{gn}}) + |\Delta{y_{gn}} - \Delta{x_{gn}}|
-$$
+$$h(n) = \sqrt{2}\min(\Delta{y_{gn}}, \Delta{x_{gn}}) + |\Delta{y_{gn}} - \Delta{x_{gn}}|$$
 *Euclidean distance*
-$$
-h(n) = \sqrt{(y_g - y_n)^2 + (x_g - x_n)^2}
-$$
+$$h(n) = \sqrt{(y_g - y_n)^2 + (x_g - x_n)^2}$$
 
 
 ## Pseudocode
