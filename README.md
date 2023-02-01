@@ -46,27 +46,27 @@ $$h(n) = \sqrt{(y_g - y_n)^2 + (x_g - x_n)^2}$$
 
 ```pseudocode
 function Astar(S, G):
-	define Min-Heap OPEN
-	define Hash-Table CLOSE
-	OPEN.push(S, h(S))
-	
-	while OPEN is not Empty:
-		node = OPEN.pop()
-		if node == G:
-			return Path(S, G), CLOSE[node].g
-		else:
-			for child in T(node):
-				g = CLOSE[node].g + cost(node, child)
-				f = g + h(child)
-				if child not in CLOSED:
-					OPEN.push(child, f)
-					CLOSE.append(child)
-					CLOSE[child].g = g
-					CLOSE[child].f = f
-				if child in CLOSED and child.f < CLOSE[child].f:
-					CLOSE[child].g = g
-					CLOSE[child].f = f
-	
+  define Min-Heap OPEN
+  define Hash-Table CLOSE
+  OPEN.push(S, h(S))
+
+  while OPEN is not Empty:
+    node = OPEN.pop()
+    if node == G:
+      return Path(S, G), CLOSE[node].g
+    else:
+      for child in T(node):
+        g = CLOSE[node].g + cost(node, child)
+        f = g + h(child)
+        if child not in CLOSED:
+          OPEN.push(child, f)
+          CLOSE.append(child)
+          CLOSE[child].g = g
+          CLOSE[child].f = f
+        if child in CLOSED and child.f < CLOSE[child].f:
+          CLOSE[child].g = g
+          CLOSE[child].f = f
+
     return -1
 ```
 
