@@ -1,7 +1,7 @@
 # A*
 
 ![](https://www.101computing.net/wp/wp-content/uploads/A-Star-Search-Algorithm-Step-5.png)
-> From https://www.101computing.net/a-star-search-algorithm/
+> Image from https://www.101computing.net/a-star-search-algorithm/
 >
 
 ## Description
